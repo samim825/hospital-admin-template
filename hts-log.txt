@@ -1,0 +1,15 @@
+HTTrack3.49-2+libhtsjava.so.2 launched on Sun, 27 Nov 2022 19:04:42 at https://eres.dexignzone.com/xhtml/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w https://eres.dexignzone.com/xhtml/index.html -O "/home/samimhossain/websites/admin-hospital" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+19:04:44	Warning: 	Found for https://eres.dexignzone.com/robots.txt
+19:04:44	Warning: 	File has moved from https://eres.dexignzone.com/robots.txt to https://eres.dexignzone.com/xhtml/page-error-404.html
+19:10:11	Warning: 	Note: due to https://cdn.lineicons.com remote robots.txt rules, links beginning with these path will be forbidden: / (see in the options to disable this)
+19:11:08	Warning: 	Warning: store application/octet-stream without scan: /home/samimhossain/websites/admin-hospital/eres.dexignzone.com/xhtml/icons/icomoon/fonts/icomoon.svg
+
+HTTrack Website Copier/3.49-2 mirror complete in 6 minutes 26 seconds : 370 links scanned, 368 files written (31130961 bytes overall) [26427063 bytes received at 68463 bytes/sec], 5880194 bytes transferred using HTTP compression in 74 files, ratio 19%, 10.7 requests per connection
+(No errors, 4 warnings, 0 messages)
