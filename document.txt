@@ -1,29 +1,32 @@
+//Replce this code  in healthId service repository
 repositories {
         maven { url = 'https://repo.maven.apache.org/maven2' }
     }
     
     
     
-    FROM centos
-
+//Add this code in DockerFile in every repository    
+FROM centos
 RUN cd /etc/yum.repos.d/
 RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-
 RUN  yum install java-1.8.0-openjdk -y
 
 
 
 
 
-
+//Add this method in EncounterBundle Class
 public void setContent(String content) {
         this.encounterContent = new EncounterContent(content);
     }
     
     
     
-    
+  
+  
+ // Josn format body for Save an encounter.
+   
     {
     "content": "\n\n<Bundle xmlns=\"http://hl7.org/fhir\">\n    <id value=\"c820e3ea-d7a4-489a-9284-fbaaf0fe8e1a\"/>\n    <meta>\n        <lastUpdated value=\"2017-03-14T11:39:10.000+05:30\"/>\n    </meta>\n    <type value=\"collection\"/>\n    <entry>\n        <fullUrl value=\"urn:uuid:d1624f29-6962-4d15-9931-09dd5c85b9cf\"/>\n        <resource>\n            <Composition xmlns=\"http://hl7.org/fhir\">\n                <identifier>\n                    <value value=\"urn:uuid:d1624f29-6962-4d15-9931-09dd5c85b9cf\"/>\n                </identifier>\n                <date value=\"2017-03-14T11:39:10.000+05:30\"/>\n                <type>\n                    <coding>\n                        <system value=\"http://hl7.org/fhir/vs/doc-typecodes\"/>\n                        <code value=\"51899-3\"/>\n                        <display value=\"Details Document\"/>\n                    </coding>\n                </type>\n                <title value=\"Patient Clinical Encounter\"/>\n                <status value=\"final\"/>\n                <confidentiality value=\"N\"/>\n                <subject>\n                    <reference value=\"http://localhost:8081/api/default/patients/98000101074\"/>\n                    <display value=\"98000101074\"/>\n                </subject>\n                <author>\n                    <reference value=\"http://identity-server:8080/facilities/10019842.json\"/>\n                </author>\n                <encounter>\n                    <reference value=\"urn:uuid:14278c1c-95b4-43f0-aa35-66e366fb45dc\"/>\n                </encounter>\n                <section>\n                    <entry>\n                        <reference value=\"urn:uuid:14278c1c-95b4-43f0-aa35-66e366fb45dc\"/>\n                        <display value=\"Encounter\"/>\n                    </entry>\n                </section>\n            </Composition>\n        </resource>\n    </entry>\n    <entry>\n        <fullUrl value=\"urn:uuid:14278c1c-95b4-43f0-aa35-66e366fb45dc\"/>\n        <resource>\n            <Encounter xmlns=\"http://hl7.org/fhir\">\n                <identifier>\n                    <value value=\"urn:uuid:14278c1c-95b4-43f0-aa35-66e366fb45dc\"/>\n                </identifier>\n                <status value=\"finished\"/>\n                <class value=\"field\"/>\n                <type>\n                    <coding>\n                        <system value=\"http://hl7.org/fhir/vs/doc-typecodes\"/>\n                        <code value=\"51899-3\"/>\n                        <display value=\"Details Document\"/>\n                    </coding>\n                </type>\n                <subject>\n                    <reference value=\"http://localhost:8081/api/default/patients/98000101074\"/>\n                    <display value=\"98000101074\"/>\n                </subject>\n                <patient>\n                    <reference value=\"http://localhost:8081/api/default/patients/98000101074\"/>\n                    <display value=\"98000101074\"/>\n                </patient>\n                <period>\n                    <start value=\"2017-03-14T11:38:52.000+05:30\"/>\n                </period>\n            </Encounter>\n        </resource>\n    </entry>\n</Bundle>\n\n"
 }
